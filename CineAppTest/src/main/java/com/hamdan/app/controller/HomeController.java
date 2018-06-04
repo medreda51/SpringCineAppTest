@@ -16,6 +16,7 @@ import com.hamdan.app.model.Pelicula;
  * @author mohamed.hamdan
  * */
 
+
 @Controller
 public class HomeController {
 
