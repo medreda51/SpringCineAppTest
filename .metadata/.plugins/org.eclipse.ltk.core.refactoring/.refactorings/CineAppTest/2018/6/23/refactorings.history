@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Move element &apos;HomeController.java&apos; to &apos;cineapp/src/main/java/net.itinajero.app.controller&apos;&#x0D;&#x0A;- Original project: &apos;CineAppTest&apos;&#x0D;&#x0A;- Destination element: &apos;cineapp/src/main/java/net.itinajero.app.controller&apos;&#x0D;&#x0A;- Original element: &apos;com.hamdan.app.controller.HomeController.java&apos;&#x0D;&#x0A;- Update references to refactored element" description="Move compilation unit" destination="=cineapp/src\/main\/java&lt;net.itinajero.app.controller" element1="/src\/main\/java&lt;com.hamdan.app.controller{HomeController.java" files="0" flags="589830" folders="0" id="org.eclipse.jdt.ui.move" patterns="*" policy="org.eclipse.jdt.ui.moveResources" qualified="false" references="true" stamp="1528106733114" units="1" version="1.0"/>
+</session>

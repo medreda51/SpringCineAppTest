@@ -1,0 +1,5 @@
+#Tomcat publish data
+#Mon Jun 04 12:14:46 CEST 2018
+org.eclipse.jst.jee.server\:/binary\:C\:\\Users\\mohamed.hamdan\\.m2\\repository\\org\\springframework\\spring-web\\5.0.0.RELEASE\\spring-web-5.0.0.RELEASE.jar=C\:\\Users\\mohamed.hamdan\\Desktop\\Spring\\Herramientas\\sts-bundle\\pivotal-tc-server\\instances\\base-instance\\wtpwebapps\\CineAppTest\\WEB-INF\\lib\\spring-web-5.0.0.RELEASE.jar
+org.eclipse.jst.jee.server\:CineAppTest=C\:\\Users\\mohamed.hamdan\\Desktop\\Spring\\Herramientas\\sts-bundle\\pivotal-tc-server\\instances\\base-instance\\wtpwebapps\\CineAppTest
+org.eclipse.jst.jee.server\:cineapp=C\:\\Users\\mohamed.hamdan\\Desktop\\Spring\\Herramientas\\sts-bundle\\pivotal-tc-server\\instances\\base-instance\\wtpwebapps\\cineapp
