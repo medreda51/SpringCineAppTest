@@ -8,11 +8,14 @@ import java.util.List;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
-import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.RequestParam;
 
 import com.hamdan.app.model.Pelicula;
+import com.hamdan.app.utils.Utils;
+
+
 
 /**
  * @author mohamed.hamdan
@@ -32,18 +35,40 @@ public class HomeController {
 	@RequestMapping(value = "/", method = RequestMethod.GET)
 	public String mostrarPrincipal(Model model) {
 
+		List<String> listaFechas = Utils.getNextDays(3);
 		List<Pelicula> peliculas = getLista();
-//		peliculas.add("Rapido y furioso");
-//		peliculas.add("El aro 2");
-//		peliculas.add("Aliens");
+		model.addAttribute("fechas",listaFechas);
 		model.addAttribute("fechaBusqueda",dateFormat.format(new Date()));
 		model.addAttribute("peliculas", peliculas);
 		return "home";
 	}
+	
+	
+	
+	@RequestMapping(value="/search", method=RequestMethod.POST)
+	public String buscar(@RequestParam("fecha") String fecha, Model model){
+		
+		List<String> listaFechas = Utils.getNextDays(4);
+		
+		List<Pelicula> peliculas = getLista();
 
-	@RequestMapping(value = "/detail/{id}/{fecha}",method= RequestMethod.GET)
-	public String mostrarDetalle(Model model, @PathVariable("id") int idPelicula, 
-			@PathVariable("fecha") String fecha) {
+		model.addAttribute("fechas", listaFechas);
+		model.addAttribute("fechaBusqueda", fecha);
+		model.addAttribute("peliculas", peliculas);
+		
+		System.out.println("Buscando todas las peliculas en exhibicion para la fecha: " + fecha);
+		return "home";
+	}
+
+	
+	
+
+	//@RequestMapping(value = "/detail/{id}/{fecha}",method= RequestMethod.GET)
+	@RequestMapping(value = "/detail",method= RequestMethod.GET)
+//	public String mostrarDetalle(Model model, @PathVariable("id") int idPelicula, 
+//			@PathVariable("fecha") String fecha) {
+		
+	public String mostrarDetalle(Model model, @RequestParam("idMovie") int idPelicula, @RequestParam("fecha") String fecha) {
 		
 		System.out.println("idPelicula: "+idPelicula);
 		System.out.println("Fecha: "+fecha);
